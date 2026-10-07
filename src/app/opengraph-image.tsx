@@ -107,3 +107,5 @@ export default async function Image() {
     size,
   );
 }
+
+export const dynamic = "force-static";

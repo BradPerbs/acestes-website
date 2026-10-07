@@ -6,3 +6,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: siteUrl, lastModified: new Date(`${site.released}T00:00:00Z`), changeFrequency: "weekly", priority: 1 },
   ];
 }
+
+export const dynamic = "force-static";
