@@ -23,8 +23,7 @@ export const site = {
 export const siteUrl = (() => {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL;
   if (explicit) return explicit.replace(/\/$/, "");
-  const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL;
-  if (vercel) return `https://${vercel}`;
+  if (process.env.NODE_ENV === "production") return "https://tryacestes.com";
   return "http://localhost:3000";
 })();
 
