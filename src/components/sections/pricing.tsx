@@ -1,3 +1,4 @@
+import { AppVersion } from "@/components/app-version";
 import { Download04Icon, PiIcon } from "@hugeicons/core-free-icons";
 import { builds, downloadUrl, site } from "@/lib/site";
 import { DownloadButton } from "../download-button";
@@ -77,7 +78,7 @@ export function Pricing() {
                 rel="noopener noreferrer"
                 className="text-[13px] text-muted hover:text-fg"
               >
-                v{site.version} · all releases ↗
+                v<AppVersion /> · all releases ↗
               </a>
             </div>
             <ul className="border-t border-line">

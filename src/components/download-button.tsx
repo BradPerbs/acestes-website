@@ -1,5 +1,6 @@
 "use client";
 
+import { AppVersion } from "@/components/app-version";
 import { useEffect, useId, useLayoutEffect, useRef, useState, type CSSProperties } from "react";
 import { createPortal } from "react-dom";
 import { ArrowDown01Icon, Download04Icon } from "@hugeicons/core-free-icons";
@@ -192,7 +193,9 @@ export function DownloadButton({
               className="flex items-center justify-between rounded-xl px-3 py-2.5 text-[13px] text-muted transition-colors outline-none hover:bg-panel-2 hover:text-fg focus-visible:bg-panel-2 focus-visible:text-fg"
             >
               All releases
-              <span className="font-mono text-[11px]">v{site.version}</span>
+              <span className="font-mono text-[11px]">
+                v<AppVersion />
+              </span>
             </a>
           </div>,
           document.body,

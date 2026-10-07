@@ -1,5 +1,6 @@
 "use client";
 
+import { AppVersion } from "@/components/app-version";
 import { useRef } from "react";
 import { ArrowRight01Icon } from "@hugeicons/core-free-icons";
 import { site } from "@/lib/site";
@@ -82,7 +83,9 @@ export function Hero() {
               className="group/ann inline-flex max-w-full items-center gap-2.5 rounded-full border border-white/20 bg-white/[0.06] py-1.5 pr-1.5 pl-4 text-[13px] text-white/90 backdrop-blur-md transition-colors hover:border-white/35 hover:bg-white/10 sm:text-[14px]"
             >
               <span className="truncate">
-                <span className="font-medium">Acestes {site.version}</span>
+                <span className="font-medium">
+                  Acestes <AppVersion />
+                </span>
                 <span className="text-white/60"> · charts in replies, split view with terminals</span>
               </span>
               <span className="grid size-6 shrink-0 place-items-center rounded-full bg-white text-[#3b0f8f] transition-transform group-hover/ann:translate-x-0.5">
@@ -122,7 +125,7 @@ export function Hero() {
               data-reveal
               className="mt-6 rounded-full bg-black/25 px-3 py-1 font-mono text-[12px] tracking-wide text-white/75 backdrop-blur-sm"
             >
-              v{site.version} · free · Windows, macOS, Linux
+              v<AppVersion /> · free · Windows, macOS, Linux
               <span className="hidden sm:inline">
                 {" "}
                 ·{" "}

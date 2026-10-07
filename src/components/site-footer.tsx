@@ -1,3 +1,4 @@
+import { AppVersion } from "@/components/app-version";
 import { Bug01Icon, Download04Icon, RssIcon } from "@hugeicons/core-free-icons";
 import { site } from "@/lib/site";
 import { Wordmark } from "./brand";
@@ -78,7 +79,7 @@ export function SiteFooter() {
           <p>© {new Date().getFullYear()} Acestes Agent. Fair-code licensed, forked from CloudTerm 1.4.3.</p>
           <div className="flex items-center gap-4">
             <a href={site.latest} {...ext} className="hidden items-center gap-1.5 hover:text-fg sm:flex">
-              <Icon icon={Download04Icon} size={14} />v{site.version}
+              <Icon icon={Download04Icon} size={14} />v<AppVersion />
             </a>
             <ThemeSwitch />
           </div>

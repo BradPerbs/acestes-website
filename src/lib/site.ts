@@ -5,8 +5,10 @@ export const site = {
   tagline: "Every agent. Every account. One app.",
   description:
     "Acestes runs Claude Code, Codex, Cursor and ten more coding agents side by side, on all your accounts, in one desktop app. It remembers how you work, drives your desktop apps and opens shells on your servers.",
-  version: "1.3.4",
-  released: "2026-10-04",
+  // The latest release at build time, filled in by next.config.ts.
+  // <AppVersion /> refreshes it in the browser if a newer one is out.
+  version: process.env.NEXT_PUBLIC_APP_VERSION ?? "",
+  released: process.env.NEXT_PUBLIC_APP_RELEASED ?? "",
   repo,
   releases: `${repo}/releases`,
   latest: `${repo}/releases/latest`,

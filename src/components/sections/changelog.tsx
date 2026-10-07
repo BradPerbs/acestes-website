@@ -32,9 +32,11 @@ export function Changelog() {
         </div>
         <div className="flex items-center gap-3">
           <span className="rounded-full border border-line px-3 py-1 font-mono text-[13px]">v{site.version}</span>
-          <span className="text-[14px] text-muted">
-            Released <time dateTime={site.released}>{released}</time>
-          </span>
+          {site.released && (
+            <span className="text-[14px] text-muted">
+              Released <time dateTime={site.released}>{released}</time>
+            </span>
+          )}
         </div>
       </div>
       <a
